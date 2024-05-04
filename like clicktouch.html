@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Like Button</title>
+    <style>
+        /* Style for the button */
+        .like-button {
+            border: none;
+            background: none;
+            cursor: pointer;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <button class="like-button" onclick="toggleLike()">
+        <img src="img/uverytic.png" alt="Like" id="like-image">
+    </button>
+    <script>
+        var isLiked = false; // Initially, the button is in the "unliked" state
+
+        function toggleLike() {
+            var likeImage = document.getElementById("like-image");
+            if (isLiked) {
+                likeImage.src = "img/veryticked.png";
+            } else {
+                likeImage.src = "img/uverytic.png";
+            }
+            isLiked = !isLiked;
+        }
+    </script>
+</body>
+</html>
